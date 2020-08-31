@@ -1,0 +1,13 @@
+version: "3.7"
+
+services:
+  my-app:
+    container_name: Habits
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ".:/src"
+      - "/node_modules"
+    ports:
+      - "8081:8080"
